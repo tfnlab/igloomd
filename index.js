@@ -26,14 +26,13 @@ app.get('/api/token/:token_id', function(req, res) {
     'animation_url': `${person.imgurl}`,
     'attributes': {
       'Diameter Meters': person.diameter,
-      'Lot Length Meters': person.lotlength,
-      'Lot Width Meters': person.lotwidth,
       'Lot Size': person.lotsq
     },
     'image': `${person.imgurl}`
   }
   res.send(data)
 })
+
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
