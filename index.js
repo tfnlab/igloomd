@@ -25,14 +25,18 @@ app.get('/api/token/:token_id', function(req, res) {
     'name': tokenId,
     'animation_url': `${person.imgurl}`,
     'attributes': {
-      'Diameter Meters': person.diameter,
-      'Lot Size': person.lotsq
+      'Building Length': person.length,
+      'Building Width': person.width,
+      'Building Height': person.height,
+      'Building Square Footage': person.sq,
+      'Lot Length ': person.lotlength,
+      'Lot Width': person.lotwidth,
+      'Lot Square Footage': person.lotsq
     },
     'image': `${person.imgurl}`
   }
   res.send(data)
 })
-
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
