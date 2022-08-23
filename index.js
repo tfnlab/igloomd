@@ -29,10 +29,10 @@ app.get('/api/token/:token_id', function(req, res) {
       'Lot Length Meters': person.lotlength,
       'Lot Width Meters': person.lotwidth,
       'Material': `${person.material}`,
-      'Has Fishing Hole': `${person.fh}`,
-      'Has Loft': `${person.loft}`,
-      'Has Balcony': `${person.balcony}`,
-      'Lot Size': person.lotsq
+      'Lot Has Fishing Hole': `${person.fh}`,
+      'Igloo Has a Loft': `${person.loft}`,
+      'Loft Has a Balcony': `${person.balcony}`,
+      'Lot Size SQ. Meters': person.lotsq
     },
     'image': `${person.imgurl}`
   }
