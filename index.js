@@ -25,13 +25,14 @@ app.get('/api/token/:token_id', function(req, res) {
     'name': tokenId,
     'animation_url': `${person.imgurl}`,
     'attributes': {
-      'Building Length': person.length,
-      'Building Width': person.width,
-      'Building Height': person.height,
-      'Building Square Footage': person.sq,
-      'Lot Length ': person.lotlength,
-      'Lot Width': person.lotwidth,
-      'Lot Square Footage': person.lotsq
+      'Diameter Meters': person.diameter,
+      'Lot Length Meters': person.lotlength,
+      'Lot Width Meters': person.lotwidth,
+      'Material': `${person.material}`,
+      'Has Fishing Hole': `${person.fh}`,
+      'Has Loft': `${person.loft}`,
+      'Has Balcony': `${person.balcony}`,
+      'Lot Size': person.lotsq
     },
     'image': `${person.imgurl}`
   }
